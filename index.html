@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <h1 class="h1"><title>研究室HP作成</title></h1>
+
+    <link href="common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/layout.css">
+    <link rel="stylesheet" href="common/css/global.css">
+</head>
+<body>
+    <header class="topHeader">
+        <div class="container-fluid menubar fixed-top">
+            <div class="row menubar_row">
+                <!-- 画面サイズがlg以上の時に表示されるロゴ -->
+                <div class="col-lg-3 d-none d-lg-block menubar_col">
+                    <div class="logoBox">
+                        <a href="./index.html" class="logoLink">
+                            <img src="common/img/logo.svg" alt="" class="img-fluid logoImg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 menubar_col">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menubar_navbar">
+                        <!-- 画面サイズがlg以下の時に表示されるロゴ -->
+                        <div class="col-3">
+                            <div class="logoBox d-lg-none">
+                                <a href="./index.html" class="logoLink">
+                                    <img src="common/img/logo.svg" alt="" class="img-fluid logoImg">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ハンバーガーメニュー -->
+                            <div class="navbar-toggler hamburgerMenu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        <!-- グローバルメニュー -->
+                        <div class="collapse navbar-collapse menubar_collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-justified menubar_navbar-nav">
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./about.html">研究紹介</a>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./member.html">メンバー</a>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <!-- 研究発表のみjsでリンク先を管理 -->
+                                    <div class="pub_link">
+                                        <a class="nav-link" href="./publications.html">研究発表</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./contacts.html">お問い合わせ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="container">
+            <div class="row">
+                <!-- イントロの文章 -->
+                <div class="contArea">
+                    <div class="introBox border border-dark">　ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。<br>
+                        　ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。
+                        ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。
+                        ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。ここにイントロが入ります。
+                    </div>
+                </div>
+                <div class="contArea">
+                    <!-- News欄 -->
+                    <div class="newsBox border border-dark">
+                        <h2 class="h2 top_h2">News</h2>
+                        <div class="container">
+                            <!-- 常に表示されているNews -->
+                            <div class="row newsList txt-show">
+                                <div class="newsDateBox col-12 col-lg-2">
+                                    <div class="date">2022.10.01</div>
+                                </div>
+                                <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                </div>
+                            </div>
+                            <div class="row newsList txt-show">
+                                <div class="newsDateBox col-12 col-lg-2">
+                                    <div class="date">2022.10.01</div>
+                                </div>
+                                <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                </div>
+                            </div>
+                            <div class="row newsList txt-show">
+                                <div class="newsDateBox col-12 col-lg-2">
+                                    <div class="date">2022.10.01</div>
+                                </div>
+                                <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                </div>
+                            </div>
+                            <!-- Moreボタンで展開されるNews -->
+                            <div class="news_txt-hide">
+                                <div class="row newsList">
+                                    <div class="newsDateBox col-12 col-lg-2">
+                                        <div class="date">2022.10.01</div>
+                                    </div>
+                                    <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                    </div>
+                                </div>
+                                <div class="row newsList">
+                                    <div class="newsDateBox col-12 col-lg-2">
+                                        <div class="date">2022.10.01</div>
+                                    </div>
+                                    <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                    </div>
+                                </div>
+                                <div class="row newsList">
+                                    <div class="newsDateBox col-12 col-lg-2">
+                                        <div class="date">2022.10.01</div>
+                                    </div>
+                                    <div class="newsTitle col-12 col-lg-10">ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。ここにニュースが入ります。
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="news_more"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contArea">
+                    <div class="container abst_banner">
+                        <!-- 常に表示されているNews -->
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <!-- 研究概要の文章 -->
+                                <div class="abstBox border border-dark">
+                                    <h2 class="h2 top_h2">h2タイトル</h2>
+                                    <h3 class="h3 top_h3">「h3タイトル」</h3>
+                                    <!-- 常に表示されている文章 -->
+                                    <div class="txt-show">
+                                        　ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。
+                                    </div>
+
+                                    <!-- Moreボタンで展開される文章 -->
+                                    <div class="abst_txt-hide">
+                                        　ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。<br>
+                                        　ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。
+                                        ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。ここに概要が入ります。<br><br>
+
+                                        ここに箇条書きが入ります。<br>
+                                        <ol class="cont_ol">
+                                            <li>
+                                                箇条書きその1
+                                            </li>
+                                            <li>
+                                                箇条書きその2
+                                            </li>
+                                            <li>
+                                                箇条書きその3
+                                            </li>
+                                            <li>
+                                                箇条書きその4
+                                            </li>
+                                            <li>
+                                                箇条書きその5
+                                            </li>
+                                            <li>
+                                                箇条書きその6
+                                            </li>
+                                        </ol>
+                                    </div>
+
+                                    <!-- Moreボタン -->
+                                    <button class="abst_more"></button>
+                                </div>
+                            </div>
+
+                            <!-- バナー -->
+                            <div class="col-lg-3">
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_1.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_2.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_3.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_4.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_5.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                                <div class="bannerBox">
+                                    <a href="./" class="bannerLink">
+                                        <img src="common/img/banner_6.svg" alt="" class="img-fluid bannerImg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="bg-dark">
+        <div class="footArea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h2 h2_footer">研究室HP</h2>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./index.html">トップ</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./about.html">研究紹介</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./member.html">メンバー</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <!-- 研究発表のみjsでリンク先を管理 -->
+                        <div class="pub_link">
+                            <a href="./publications.html">研究発表</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./contacts.html">お問い合わせ</a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyRight">
+            Copyright &copy; academeia Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/script.js"></script>
+</body>
+</html>
