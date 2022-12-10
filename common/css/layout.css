@@ -1,0 +1,917 @@
+@charset "UTF-8";
+/*
+Description: CSS for Template.
+Version: 1.0.0
+*/
+
+/* Font
+**************************************************************************************/
+/*@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);*/
+
+/* CSS Reset
+**************************************************************************************/
+body {
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 14px;
+    color: #333333;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+/*dl, dt, dd, ol, ul, li,*/
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+input, textarea {
+    margin: 0;
+    padding: 0;
+}
+/*
+ol, ul {
+    list-style: none;
+}*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    word-break: break-all;
+}
+
+caption, th {
+    text-align: left;
+}
+
+a:focus {
+    outline: none;
+}
+
+br {
+    letter-spacing: normal;
+}
+
+hr {
+    display: none;
+}
+
+img {
+    vertical-align: bottom;
+    font-size: 1px;
+}
+
+img a {
+    border: none;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+
+/*=============================================================================
+ common
+=============================================================================*/
+.displayBlock {
+    display: block;
+}
+
+/* Float Clear
+------------------------------------------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+
+/*=============================================================================
+ 5column
+=============================================================================*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (max-width: 991px) {
+    .col-md-15 {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/*=============================================================================
+ layout
+=============================================================================*/
+
+body {
+    /*
+    display: flex;
+    flex-direction: column;*/
+    min-height: 100vh;
+    width: 100%;
+}
+
+.inner {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inner::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+
+/*=============================================================================
+ header
+=============================================================================*/
+/* 背景要素 <div class="background"></div> */
+
+.background {
+
+}
+
+
+.topHeader {
+    width: 100%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subHeader {
+    width: 100%;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ハンバーガーメニュー
+-----------------------------*/
+
+header .menubar .hamburgerMenu{
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+    position: relative;
+}
+header .menubar .hamburgerMenu span{
+    display: block;
+    margin: 0;
+    border: none;
+    width: 50%;
+    height: 3px;
+    background: #bbb;
+    transform-origin:0% 50%;
+    position: absolute;
+    top: 12px;
+    left: 25%;
+    transition: .3s;
+}
+header .menubar .hamburgerMenu span:nth-of-type(2){
+    top: 21px;
+}
+header .menubar .hamburgerMenu span:nth-of-type(3){
+    top: 30px;
+}
+header .menubar .close span{
+    left: 30%;
+}
+header .menubar .close span:nth-of-type(1){
+    transform: rotate(45deg);
+    width: 52%;
+}
+header .menubar .close span:nth-of-type(2){
+    opacity: 0;
+}
+header .menubar .close span:nth-of-type(3){
+    top: 37px;
+    transform: rotate(-45deg);
+    width: 52%;
+}
+
+/* menubar
+-----------------------------*/
+header .menubar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+header .menubar .menubar_row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header .menubar .menubar_navbar-nav {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    header .menubar .menubar_col {
+        padding-left: 0;
+        padding-right: 0;
+        height: 100px;
+    }
+
+    header .menubar .menubar_navbar {
+        height: 100px;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: block;
+    }
+
+    header .menubar .menubar_collapse {
+        height: 100px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header .menubar .menubar_col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    header .menubar .menubar_navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 10px;
+    }
+
+    header .menubar .navbar-toggler {
+        border-color: rgba(0,0,0,0);
+    }
+
+    header .menubar .menubar_collapse {
+        font-size: 2rem;
+    }
+}
+
+
+/*Logo
+-----------------------------*/
+header .logoBox {
+    position: relative;
+    height: 100px;
+    text-align: center;
+    background: #344169 0% 0% no-repeat padding-box;
+}
+header .logoBox a.logoLink {
+    text-decoration: none;
+}
+header .logoBox .logoImg {
+    height: 100%;
+}
+
+
+
+/*==================================================================================
+header subMainImg
+==================================================================================*/
+header .subMainBox {
+    position: relative;
+    padding-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+header .subMainBox .subMainImg_jumbotron {
+    padding: 75px 0;
+    background: url(../img/sub_bg_img.jpg) center no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+    header .subMainBox .subMainImg_h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+@media (max-width: 991px) {
+    header .subMainBox .subMainImg_h1 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+
+
+/*==================================================================================
+header breadcrumbBox
+==================================================================================*/
+header .breadcrumbBox {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #333333;
+}
+
+header .breadcrumbBox a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header .breadcrumbBox a:hover{
+    text-decoration: underline;
+}
+
+header .breadcrumbBox .breadcrumb li+li:before {
+    color: #fff;
+}
+
+header .breadcrumbBox .active{
+    color: #fff;
+}
+
+header .breadcrumbBox .breadcrumb_ol{
+    margin: 0.5rem 0;
+}
+
+
+
+
+
+/*=============================================================================
+main
+=============================================================================*/
+.content {
+    flex: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+
+
+/*=============================================================================
+main contArea
+=============================================================================*/
+
+
+.content .contArea {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    padding-top: 50px;
+}
+.content .contArea p {
+    margin-bottom: 1rem;
+}
+.content .contArea .cont_ol {
+    line-height: 2;
+}
+.content .contArea .cont_ul {
+    line-height: 2;
+}
+
+
+
+
+/*=============================================================================
+TOPページ タイトル
+=============================================================================*/
+
+.content .contArea .top_h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.content .contArea .top_h3{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/*=============================================================================
+main introBox
+=============================================================================*/
+
+
+.content .contArea .introBox {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+
+
+
+
+/*=============================================================================
+main newsBox
+=============================================================================*/
+
+
+.content .contArea .newsBox {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.content .contArea .newsBox .newsList {
+    border-bottom: 2px #cccccc90 solid;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+.content .contArea .newsBox .newsDateBox .date {
+    position: relative;
+    font-weight: normal;
+}
+.content .contArea .newsBox .newsTitle {
+    /* margin-top: 2rem; */
+    font-weight: normal;
+}
+
+@media (min-width: 992px) {
+    .content .contArea .newsBox .newsDateBox {
+        position: relative;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .content .contArea .newsBox .newsDateBox {
+        position: relative;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+
+
+
+/*=============================================================================
+main abst_banner
+=============================================================================*/
+
+
+.content .contArea .abst_banner {
+    position: relative;
+    padding: 0px;
+}
+
+
+
+
+
+
+/*=============================================================================
+main abstBox
+=============================================================================*/
+
+
+.content .contArea .abstBox {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/*=============================================================================
+main bannerBox
+=============================================================================*/
+
+
+/*Banner
+-----------------------------*/
+.content .contArea .bannerBox {
+    position: relative;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    background: #d1d187 0% 0% no-repeat padding-box;
+}
+.content .contArea .bannerBox a.bannerLink {
+    text-decoration: none;
+}
+.content .contArea .bannerBox .bannerImg {
+    height: 100%;
+}
+
+
+/*=============================================================================
+moreボタン
+=============================================================================*/
+
+
+/*News
+-----------------------------*/
+.news_txt-hide{
+    display: none;
+}
+
+button.news_more {
+width: 120px;
+margin: 20px auto;
+display: block;
+background-color: #666;
+color: #fff;
+padding: 10px 15px;
+border: none;
+outline: 0;
+transition: .5s;
+-erbkit-transition: .5s;
+}
+
+button.news_more::after {
+content: "More";
+transition: .2s;
+-erbkit-transition: .2s;
+}
+
+button.news_more.on-click::after{
+content: "Close";
+}
+
+
+/*Abstract
+-----------------------------*/
+.abst_txt-hide{
+    display: none;
+}
+
+button.abst_more {
+width: 120px;
+margin: 20px auto;
+display: block;
+background-color: #666;
+color: #fff;
+padding: 10px 15px;
+border: none;
+outline: 0;
+transition: .5s;
+-erbkit-transition: .5s;
+}
+
+button.abst_more::after {
+content: "More";
+transition: .2s;
+-erbkit-transition: .2s;
+}
+
+button.abst_more.on-click::after{
+content: "Close";
+}
+
+
+/*=============================================================================
+ subPage
+=============================================================================*/
+
+.content.subPage .contArea h2 {
+    padding-bottom: 10px;
+}
+
+.content.subPage .contArea h3{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.content.subPage .contArea a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.content.subPage .contArea a:hover{
+    text-decoration: underline;
+}
+
+.content.subPage .contArea .cont_row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content.subPage .contArea .cont_col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content.subPage .contArea .cont_btn {
+    background-color: #6680cc;
+    color: #fff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.content.subPage .contArea .cont_btn:hover{
+    background-color: #4d6099;
+    text-decoration: none;
+}
+
+.content.subPage .contArea .contTitleLine {
+    border-bottom: 2px #6c757d solid;
+}
+
+.content.subPage .contArea .contDotLine {
+    border-bottom: 2px #6c757d dashed;
+    margin-bottom: 20px;
+}
+
+.content.subPage .contArea .contTitleLine_end {
+    border-bottom: 2px #6c757d solid;
+    margin-bottom: 80px;
+}
+
+.content.subPage .contArea .contImg {
+    max-width: 300px;
+}
+
+.content.subPage .contArea .contTxtTitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.content.subPage .contArea .contTxt {
+    margin-bottom: 40px;
+}
+
+.content.subPage .contArea .contTxt .contTxtbold {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.content.subPage .contArea .contTxt a{
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.content.subPage .contArea .contTxt a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+    .content.subPage .contArea .contTxtImg {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .content.subPage .contArea .contTxtImg .contImg {
+        max-width: 250px;
+    }
+
+    .content.subPage .contArea .contTxtImg .contTxt {
+        margin-left: 40px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .content.subPage .contArea .contTxtImg {
+        margin-bottom: 40px;
+    }
+
+    .content.subPage .contArea .contTxtImg .contImg {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .content.subPage .contArea .contTxtImg .contTxt {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+
+
+/*サブメニュー・アコーディオン表示関連
+--------------------------------------*/
+@media screen and (min-width: 992px) {
+    .content.subPage .contArea .subMenuBox {
+        display: flex;
+        flex-flow: column;
+    }
+    .content.subPage .contArea .subMenuBox .subMenuContents {
+        position: relative;
+        padding: 20px 10px;
+        background-color: transparent;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .content.subPage .contArea .subMenuBox.sidebar_fixed {
+        position: sticky;
+        top: 130px;
+    }
+
+    .content.subPage .contArea .cont_colSeparate {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .content.subPage .contArea .accordion_col{
+        margin-bottom: 40px;
+    }
+    .content.subPage .contArea .accordion a{
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .content.subPage .contArea .accordion a:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+/*ヘッダーボタン
+--------------------------------------*/
+.content.subPage .contArea .contHeaderBtnArea {
+    padding-bottom: 30px;
+}
+
+.content.subPage .contArea .contHeaderBtnArea .cont_header_btn_col {
+    text-align: center;
+}
+
+.content.subPage .contArea .contHeaderBtnArea .cont_header_btn {
+    width: 90%;
+    font-size: 1.5rem;
+    background-color: #66CC66;
+    color: #fff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.5rem;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.content.subPage .contArea .contHeaderBtnArea .cont_header_btn:hover{
+    background-color: #59B359;
+    text-decoration: none;
+}
+
+
+/*=============================================================================
+ footer
+=============================================================================*/
+
+/*
+ footer
+------------------------------------------*/
+footer {
+    position: relative;
+    width: 100%;
+    min-height: 198px;
+    color: #fff;
+    background: #383838 center bottom no-repeat padding-box;
+    padding-top: 30px;
+}
+
+
+/*
+ footerArea
+------------------------------------------*/
+footer .footArea {
+    position: relative;
+    width: 100%;
+    min-height: 198px;
+    color: #fff;
+}
+
+footer .footArea .h2_footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer .footArea .footer_menu {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+footer .footArea .footer_menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footArea .footer_menu a:hover {
+    color: #006F86;
+    text-decoration: underline;
+}
+
+
+/* copy
+-------------------------------------*/
+footer .copyRight {
+    color: #ffffff;
+    background-color: #333333;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding: 10px;
+}
