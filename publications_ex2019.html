@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>研究発表（～2019年度） | 研究室HP作成</title>
+
+    <link href="common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/layout.css">
+    <link rel="stylesheet" href="common/css/global.css">
+</head>
+<body>
+    <header class="subHeader">
+        <div class="container-fluid menubar fixed-top">
+            <div class="row menubar_row">
+                <!-- 画面サイズがlg以上の時に表示されるロゴ -->
+                <div class="col-lg-3 d-none d-lg-block menubar_col">
+                    <div class="logoBox">
+                        <a href="./index.html" class="logoLink">
+                            <img src="common/img/logo.svg" alt="" class="img-fluid logoImg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 menubar_col">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menubar_navbar">
+                        <!-- 画面サイズがlg以下の時に表示されるロゴ -->
+                        <div class="col-3">
+                            <div class="logoBox d-lg-none">
+                                <a href="./index.html" class="logoLink">
+                                    <img src="common/img/logo.svg" alt="" class="img-fluid logoImg">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ハンバーガーメニュー -->
+                            <div class="navbar-toggler hamburgerMenu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        <!-- グローバルメニュー -->
+                        <div class="collapse navbar-collapse menubar_collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-justified menubar_navbar-nav">
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./about.html">研究紹介</a>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./member.html">メンバー</a>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <!-- 研究発表のみjsでリンク先を管理 -->
+                                    <div class="pub_link">
+                                        <a class="nav-link" href="./publications.html">研究発表</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item menubar_li">
+                                    <a class="nav-link" href="./contacts.html">お問い合わせ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- サブページメインビジュアル -->
+        <div class="container-fluid subMainBox">
+            <div class="jumbotron text-center subMainImg_jumbotron">
+                <h1 class="subMainImg_h1">研究発表</h1>
+            </div>
+        </div>
+
+        <!-- パンくずリスト -->
+        <div class="container-fluid breadcrumbBox">
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb_ol">
+                        <li class="breadcrumb-item">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">研究発表（～2019年度）</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="content subPage">
+        <div class="contArea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 d-none d-lg-block"></div>
+                    <div class="col-lg-9">
+                        <!-- 年度ごとのボタン表示 -->
+                        <div class="row contHeaderBtnArea">
+                            <div class="col-lg-4 cont_header_btn_col">
+                                <a href="./publications.html"><button type="button" class="cont_header_btn">2022年度</button></a>
+                            </div>
+                            <div class="col-lg-4 cont_header_btn_col">
+                                <a href="./publications_2021.html"><button type="button" class="cont_header_btn">2021年度</button></a>
+                            </div>
+                            <div class="col-lg-4 cont_header_btn_col">
+                                <a href="./publications_2020.html"><button type="button" class="cont_header_btn">2020年度</button></a>
+                            </div>
+                            <div class="col-lg-4 cont_header_btn_col">
+                                <a href="./publications_ex2019.html"><button type="button" class="cont_header_btn">～2019年度</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 画面サイズがlg以上の時に表示されるサイドメニュー -->
+                    <div class="col-3 d-none d-lg-block cont_colSeparate">
+                        <div class="subMenuBox sidebar_fixed">
+                            <a href="#con01">
+                                <div class="subMenuContents bg-secondary text-white">
+                                    論文・著書等
+                                </div>
+                            </a>
+                            <a href="#con02">
+                                <div class="subMenuContents bg-secondary text-white">
+                                    招待講演, 口頭発表
+                                </div>
+                            </a>
+                            <a href="#con03">
+                                <div class="subMenuContents bg-secondary text-white">
+                                    その他
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 画面サイズがlg以下の時に表示されるサイドメニュー -->
+                    <div class="col-12 d-lg-none accordion_col">
+                        <div class="accordion" id="accordionsubMenu">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Menu
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionsubMenu">
+                                    <a href="#con01">
+                                        <div class="accordion-body border">
+                                            論文・著書等
+                                        </div>
+                                    </a>
+                                    <a href="#con02">
+                                        <div class="accordion-body border">
+                                            招待講演, 口頭発表
+                                        </div>
+                                    </a>
+                                    <a href="#con03">
+                                        <div class="accordion-body border">
+                                            その他
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- 論文・著書等 -->
+                        <h2 id="con01" class="h2 contTitleLine">論文・著書等</h2>
+                        <div class="contDotLine"></div>
+                        <div class="container">
+                            <div class="contTxt">
+                                <div class="contTxtTitle">ART.1</div>
+                                author1, author2, ...<br><br>
+                                <h3 class="h3">
+                                    Title
+                                </h3>
+                                [page]
+                            </div>
+                            <a href="./index.html" target="_blank"><button type="button" class="cont_btn">詳細はこちら</button></a>
+                            <div class="contDotLine"></div>
+                            <div class="contTxt">
+                                <div class="contTxtTitle">ART.2</div>
+                                author1, author2, ...<br><br>
+                                <h3 class="h3">
+                                    Title
+                                </h3>
+                                [page]
+                            </div>
+                            <a href="./index.html" target="_blank"><button type="button" class="cont_btn">詳細はこちら</button></a>
+                            <div class="contDotLine"></div>
+                            <div class="container contTxtImg">
+                                <img src="./common/img/publications/book_1.jpg" class="img-fluid contImg" alt="Responsive image">
+                                <div class="contTxt">
+                                    <div class="contTxtTitle">ART.3</div>
+                                    author1, author2, ...<br><br>
+                                    <h3 class="h3">
+                                        Title
+                                    </h3>
+                                    [page]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contTitleLine_end"></div>
+
+                        <!-- 招待講演, 口頭発表 -->
+                        <h2 id="con02" class="h2 contTitleLine">招待講演, 口頭発表</h2>
+                        <div class="contDotLine"></div>
+                        <div class="container">
+                            <div class="contTxt">
+                                <div class="contTxtTitle">LEC.1</div>
+                                author1, author2, ...<br><br>
+                                <h3 class="h3">
+                                    Title
+                                </h3>
+                                [page]
+                            </div>
+                            <a href="./index.html" target="_blank"><button type="button" class="cont_btn">詳細はこちら</button></a>
+                            <div class="contDotLine"></div>
+                            <div class="contTxt">
+                                <div class="contTxtTitle">LEC.2</div>
+                                author1, author2, ...<br><br>
+                                <h3 class="h3">
+                                    Title
+                                </h3>
+                                [page]
+                            </div>
+                            <a href="./index.html" target="_blank"><button type="button" class="cont_btn">詳細はこちら</button></a>
+                        </div>
+                        <div class="contTitleLine_end"></div>
+
+                        <!-- その他 -->
+                        <h2 id="con03" class="h2 contTitleLine">その他</h2>
+                        <div class="contDotLine"></div>
+                        <div class="container">
+                            <div class="contTxt">
+                                <div class="contTxtTitle">OTH.1</div>
+                                author1, author2, ...<br><br>
+                                <h3 class="h3">
+                                    Title
+                                </h3>
+                                [page]
+                            </div>
+                            <a href="./index.html" target="_blank"><button type="button" class="cont_btn">詳細はこちら</button></a>
+                            <div class="contDotLine"></div>
+                            <div class="contTxt">
+                                <div class="contTxtTitle">OTH.2</div>
+                                Title
+                            </div>
+                        </div>
+                        <div class="contTitleLine_end"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="bg-dark">
+        <div class="footArea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h2 h2_footer">研究室HP</h2>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./index.html">トップ</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./about.html">研究紹介</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./member.html">メンバー</a>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <!-- 研究発表のみjsでリンク先を管理 -->
+                        <div class="pub_link">
+                            <a class="nav-link" href="./publications.html">研究発表</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 footer_menu text-center">
+                        <a href="./contacts.html">お問い合わせ</a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyRight">
+            Copyright &copy; academeia Co.,Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/script.js"></script>
+</body>
+</html>
